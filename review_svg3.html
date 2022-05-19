@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IE8 이하 웹 PNG 인식</title>
+</head>
+<body>
+    <h1>
+        IE8 이하 또는 안드로이드 2.3 이하 버전에서는 <br>
+        SVG 이미지 안나오면 PNG 이미지 형식으로 보여주게 함
+    </h1>
+    <div>
+        <img src="images/lightbulb_black_24dp.svg" alt="전구 이미지">
+    </div>
+<!-- modernizr-custom.js 파일을 웹페이지와 연결해 줌 -->
+    <script src="js/modernizr-custom.js"></script>
+    <script>
+        // Check if browser can handle SVG
+        if (!Modernizr.svg) {
+            // Get all img tag of the document and create variables
+            var i = document.getElementsByTagName("img"), j, y;
+
+            // For each img tag
+            for (j = i.length; j--;) {
+                y = i[j].src
+                // If filenames ends with SVG
+                if (y.match(/svg$/)) {
+                    // Replace "svg" by "png"
+                    i[j].src = y.slice(0, -3) + 'png'
+                }
+            }
+        }
+        </script>
+</body>
+
+</html>

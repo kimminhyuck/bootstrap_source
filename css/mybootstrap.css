@@ -1,0 +1,30 @@
+/* .col-md-6{col-md-4
+            border:1px solid red;
+} */
+table,
+th,tb {
+    text-align: center;
+}
+
+th{
+    background-color: aquamarine;
+    border: 1px solid blue !important;
+}
+
+tr, td{
+        text-align: center !important;
+}
+
+/* div{
+        text-align: center;
+} */
+
+.container{
+        margin: 0 auto;
+        width: 1000px;
+}
+
+ul{
+        list-style: none;
+
+}

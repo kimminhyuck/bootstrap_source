@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bootstrap Navigation 활용</title>
+    <!-- 합쳐지고 최소화된 최신 CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.css">
+
+<!-- 부가적인 테마 -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap-theme.min.css">
+
+<link rel="stylesheet" href="css/common.css">
+
+
+<!-- 합쳐지고 최소화된 최신 자바스크립트 -->
+<script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
+<!--폰트 어썸 추가 -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+
+</head>
+<body>
+    <!-- http://bootstrapk.com/components/#nav -->
+    <!-- http://bootstrapk.com/components/#navbar -->
+    <!-- 반응형 고정폭 콘테이너를 위해 .container를 사용하시기 바랍니다. -->
+    <div class="container" style="padding-top:100px">
+      <!-- 콤포넌트 - 네비게이션 바 - 반전된 네비게이션 바 선택 -->
+      <nav class="navbar navbar-inverse">
+        <!-- 뷰포트 전체폭까지 늘어나는 최대폭 콘테이너를 위해 .container-fluid를 적용합니다. -->
+        <div class="container-fluid">
+          <div class="navbar-header">
+            <!-- 아래 버튼 태그의 data-target\"#nav_menu" 값을 아래에div id랑 맞춰줘야한다. -->
+              <button type="button" class="collapsed navbar-toggle"   data-toggle="collapse" data-target="#nav_menu"  aria-expanded="false">
+            <!-- 확장과 축소가 되는 버튼 영역은 button 태그로 마크업하고, -->
+              <!-- 확장되었을 때는 aria-expanded="true", -->
+              <!-- 축소되었을 때는 aria-expanded="false"를 삽입합니다. -->
+              <!-- sr-only(장애인분들을 배려한 웹접근성 srceen reader only)
+              클래스를 사용하여 원하는 요소를 화면상에서는 사라지게 하는 동시에 웹 접근성을 높여줍니다. -->
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              <a href="#" class="navbar-brand">
+                bootstrap 활용
+              </a>              
+            </div>
+              <div class="collapse navbar-collapse" id="nav_menu">
+                <ul class="nav navbar-nav">
+                  <li class="active">
+                    <a href="#">HTML</a>
+                  </li>
+                  <li>
+                    <a href="#">CSS</a>
+                  </li>
+                  <li>
+                    <a href="#">Javascript</a>
+                  </li>
+                  <li>
+                    <a href="#">Pythun</a>
+                  </li>
+              </ul>          
+            </div>
+        </div>
+      </nav>
+        <!-- 그리드 시스템 레이아웃은 가로 합이 12가 되어야 합니다! -->
+        <div class="col-sm-2">
+          <div class="panel-heading">
+            Board
+          </div>
+          <div class="panel-body">
+          <a href="#">자유게시판</a>
+            <a href="#">포럼</a>
+            <a href="#">News</a>
+          </div>
+        </div>
+
+        <!-- 그리드 시스템 레이아웃은 가로 합이 12가 되어야 합니다! -->
+        <div class="col-sm-10">
+          <table class="table table-bordered table-hover">
+          <tr>
+            <th>제목</th>
+            <th>작성일</th>
+            <th>삭제</th>
+          </tr>
+          <tr>
+              <td>안녕하세요!</td>
+              <td>2022-05-13</td>
+              <td>
+                <a href="#" class="btn btn-danger">삭제</a>
+              </td>
+          </tr>
+          <tr>
+            <td>반갑습니다!</td>
+            <td>2022-05-13</td>
+            <td>
+              <a href="#" class="btn btn-success">성공</a>
+            </td>
+          </tr>
+          </table>
+        <!-- 페이지네이션(pAGINATION) 가운데 정렬 적용해 줌 -->
+        <nav class="text-center">
+          <ul class="pagination">
+            <li>
+              <a href="#" aria-label="Previous">
+                <span aria-hidden="true">&laquo;</span>
+              </a>
+            </li>
+            <li><a href="#">1</a></li>
+            <li><a href="#">2</a></li>
+            <li><a href="#">3</a></li>
+            <li><a href="#">4</a></li>
+            <li><a href="#">5</a></li>
+            <li>
+              <a href="#" aria-label="Next">
+                <span aria-hidden="true">&raquo;</span>
+              </a>
+            </li>
+          </ul>
+        </nav>
+        <div class="row">
+          <div class="col-sm-12 text-right">
+            <button type="button" class="btn btn-default">작성하기</button>
+          </div>
+        </div>
+        </div>
+
+
+
+
+
+
+
+
+
+
+      <!-- .col-md-offset-4는 .col-md-4를 4컬럼만큼 우측으로 이동시킨다는 의미임 -->
+      <div class="col-md-4 col-md-offset-4">
+        <div class="panel panel-default">
+          <div class="panel-heading">
+            로그인
+          </div>
+          <div class="panel-body">
+            <form>
+              <div class="form-group">
+                <label for="id">아이디</label>
+                <input type="text" class="form-control" id="id" placeholder="ID를 입력해 주세요!">
+              </div>
+              <br>
+              <div class="form-group">
+                <label for="pw">암호</label>
+                <input type="password" class="form-control" id="pw" placeholder="암호를 입력해 주세요!">
+              </div>
+            </form>
+            <!-- CSS - 버튼 - 크기 .btn-block을 더하는 것으로 블록 레벨 버튼(부모 요소만큼 꽉 찬 너비)을 만듭니다. -->
+            <button type="button" class="btn btn-success btn-lg btn-block">로그인</button>
+            <button type="button" class="btn btn-default btn-lg btn-block">취소</button>
+            <br>
+              <!-- 어썸 아이콘 적용  -->
+              <a href="#" class="btn btn-primary btn-lg btn-block">
+                <i class="fab fa-facebook-square"></i>
+                페이스북 로그인
+              </a>
+          </div>
+        </div>
+      </div>
+    </div>
+</body>
+</html>

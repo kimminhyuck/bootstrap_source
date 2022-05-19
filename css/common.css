@@ -1,0 +1,15 @@
+@charset 'utf-8';
+
+table, tr, th, td{
+    border: 1px solid yellowgreen !important;    
+}
+
+th{
+background-color: aquamarine;
+
+}
+
+th, td{
+        text-align: center;
+        vertical-align: middle !important;
+}

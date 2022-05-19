@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>제이쿼리 풀스크린 베가스</title>
+    <link rel="stylesheet" href="css/vegas.min.css">
+    <link rel="stylesheet" href="css/review_vg.css">
+</head>
+<body>
+
+    <div id="wrapper">
+    <div id="content">
+        <h1>FullScreen Background Image</h1>
+        <p>
+            <strong><a href="http://vegas.jaysalvat.com">Vegas.js</a></strong>
+            플러그인을 이용한 <br> 풀스크린 배경 이미지
+        </p>
+    </div><br><br>
+    <div class="logo">
+        <img src="images/logo-removebg-preview (1).png" alt="로고이미지">
+    </div>
+
+</div>
+
+    <script src="js/jquery-2.2.4.min.js"></script>
+    <script src="js/vegas.min.js"></script>
+    <script>
+        $(function () {
+            $('#wrapper').vegas({
+                slides: [
+                    { src: 'images/nature-1.jpg' },
+                    { src: 'images/nature-2.jpg' },
+                    { src: 'images/nature-3.jpg' },
+                    { src: 'videos/sea.jpg',
+                    video:{
+                        src: ['videos/sea.mp4'],
+                        loop: true,
+                        mute: true
+                    }
+                    }
+                ]
+            });
+            
+        });
+
+    </script>
+
+
+</body>
+
+</html>
